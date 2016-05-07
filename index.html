@@ -2,6 +2,13 @@
 <html>
 <head>
 <title>Your First React Project</title>
+<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+<style>
+    img {
+        height: 300px;
+        width: 300px;
+    }
+</style>
 </head>
 <body>
 <div id="content"></div>
@@ -11,6 +18,86 @@
 <script type="text/jsx">
 /*Add your React code here*/
 
+var DATA = {
+    name: "Kevin Tokheim",
+    imgURL: "youngkevin.jpg",
+    // hobbyList: ['Programming', 'Hiking', 'Playing guitar']
+    skillList: [
+                <i className="devicon-javascript-plain colored"></i>,
+                <i className="devicon-php-plain colored"></i>,
+                <i className="devicon-laravel-plain-wordmark colored"></i>,
+                <i className="devicon-react-original-wordmark colored"></i>
+            ],
+    projectList: ['Travelbug', 'Circles and Squares of Doom', 'Come Along']
+}
+
+var App = React.createClass({
+    render: function(){
+        return (
+            <div>
+                <Profile
+                    name={this.props.profileData.name}
+                    imgURL={this.props.profileData.imgURL}
+                />
+                <Skills
+                    skillList={this.props.profileData.skillList}
+                />
+                <Projects
+                    projectList={this.props.profileData.projectList}
+                />
+            </div>
+        );
+    }
+});
+
+var Profile = React.createClass({
+    render: function(){
+        return (
+            <div>
+                <h3>{this.props.name}</h3>
+                <img src={this.props.imgURL} />
+            </div>
+        );
+    }
+});
+
+//Replace with projects
+var Skills = React.createClass({
+    //use the map method to create arrays of projects and skills
+    render: function(){
+            var skills = this.props.skillList.map(function(skill, index){
+                return (<li key={index}>{skill}</li>);
+            });
+
+            return (
+                <div>
+                    <h5>Things I Like to Do:</h5>
+                    <ul>
+                    {skills}
+                    </ul>
+                </div>
+        );
+    }
+});
+
+var Projects = React.createClass({
+    render: function(){
+            var projects = this.props.projectList.map(function(project, index){
+                return (<li key={index}>{project}</li>);
+            });
+
+            return (
+                <div>
+                    <h5>Things Ive Done:</h5>
+                    <ul>
+                    {projects}
+                    </ul>
+                </div>
+        );
+    }
+});
+
+ReactDOM.render(<App profileData={DATA} />, document.getElementById('content'));
 
 </script>
 </body>
