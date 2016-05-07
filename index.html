@@ -1,7 +1,7 @@
 <!-- DOCTYPE HTML -->
 <html>
 <head>
-<title>Your First React Project</title>
+<title>Kevin Tokheim - Web Dev Portfolio</title>
 <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
 <style>
     img {
@@ -11,6 +11,7 @@
 </style>
 </head>
 <body>
+<!--the #content id is where the magic happens - everything is loaded through this tag-->
 <div id="content"></div>
 <script src="https://fb.me/react-0.14.6.js"></script>
 <script src="https://fb.me/react-dom-0.14.6.js"></script>
@@ -18,10 +19,10 @@
 <script type="text/jsx">
 /*Add your React code here*/
 
+//Contains the data that we load in our components and subsequently appears in the DOM
 var DATA = {
     name: "Kevin Tokheim",
     imgURL: "youngkevin.jpg",
-    // hobbyList: ['Programming', 'Hiking', 'Playing guitar']
     skillList: [
                 <i className="devicon-javascript-plain colored"></i>,
                 <i className="devicon-php-plain colored"></i>,
@@ -31,6 +32,8 @@ var DATA = {
     projectList: ['Travelbug', 'Circles and Squares of Doom', 'Come Along']
 }
 
+//var App is the parent component. It contains all the child components that make up this app.
+//App is rendered at the bottom by the ReactDOM.render method.
 var App = React.createClass({
     render: function(){
         return (
@@ -50,6 +53,7 @@ var App = React.createClass({
     }
 });
 
+//Profile component
 var Profile = React.createClass({
     render: function(){
         return (
@@ -61,7 +65,7 @@ var Profile = React.createClass({
     }
 });
 
-//Replace with projects
+//Skills component
 var Skills = React.createClass({
     //use the map method to create arrays of projects and skills
     render: function(){
@@ -80,6 +84,7 @@ var Skills = React.createClass({
     }
 });
 
+//Project component
 var Projects = React.createClass({
     render: function(){
             var projects = this.props.projectList.map(function(project, index){
@@ -97,6 +102,7 @@ var Projects = React.createClass({
     }
 });
 
+//Renders the App component - which contains all of our HTMl
 ReactDOM.render(<App profileData={DATA} />, document.getElementById('content'));
 
 </script>
