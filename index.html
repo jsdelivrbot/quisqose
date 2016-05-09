@@ -1,17 +1,12 @@
 <!-- DOCTYPE HTML -->
 <html>
 <head>
-<title>Kevin Tokheim - Web Dev Portfolio</title>
+<title>Your First React Project</title>
 <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
-<style>
-    img {
-        height: 300px;
-        width: 300px;
-    }
-</style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" href="/css/style.css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
-<!--the #content id is where the magic happens - everything is loaded through this tag-->
 <div id="content"></div>
 <script src="https://fb.me/react-0.14.6.js"></script>
 <script src="https://fb.me/react-dom-0.14.6.js"></script>
@@ -19,25 +14,26 @@
 <script type="text/jsx">
 /*Add your React code here*/
 
-//Contains the data that we load in our components and subsequently appears in the DOM
 var DATA = {
     name: "Kevin Tokheim",
-    imgURL: "youngkevin.jpg",
+    imgURL: "img/rsz_me.jpg",
+    // hobbyList: ['Programming', 'Hiking', 'Playing guitar']
     skillList: [
-                <i className="devicon-javascript-plain colored"></i>,
-                <i className="devicon-php-plain colored"></i>,
-                <i className="devicon-laravel-plain-wordmark colored"></i>,
-                <i className="devicon-react-original-wordmark colored"></i>
+                <i className="icon devicon-javascript-plain colored"></i>,
+                <i className="icon devicon-php-plain colored"></i>,
+                <i className="icon devicon-laravel-plain-wordmark colored"></i>,
+                <i className="icon devicon-react-original-wordmark colored"></i>
             ],
-    projectList: ['Travelbug', 'Circles and Squares of Doom', 'Come Along']
+    projectList: [<a href="http://infinite-badlands-99742.herokuapp.com/"><img src="img/travelbugthumb1.jpeg"/>Travelbug</a>,
+                  <a href="http://kevintokheim.github.io/Circles-and-Squares-of-Doom/"><img src="img/doomthumb1.jpeg"/>Circles and Squares of Doom</a>,
+                  <a href="http://dev-come-along-test.pantheon.io/"><img src="img/comealongthumb1.jpeg"/>Come Along</a>
+              ]
 }
 
-//var App is the parent component. It contains all the child components that make up this app.
-//App is rendered at the bottom by the ReactDOM.render method.
 var App = React.createClass({
     render: function(){
         return (
-            <div>
+            <div className="container">
                 <Profile
                     name={this.props.profileData.name}
                     imgURL={this.props.profileData.imgURL}
@@ -53,19 +49,17 @@ var App = React.createClass({
     }
 });
 
-//Profile component
 var Profile = React.createClass({
     render: function(){
         return (
-            <div>
-                <h3>{this.props.name}</h3>
-                <img src={this.props.imgURL} />
+            <div className="header">
+                <h3 className="heading">{this.props.name}</h3>
+                <img className="picture" src={this.props.imgURL} />
             </div>
         );
     }
 });
 
-//Skills component
 var Skills = React.createClass({
     //use the map method to create arrays of projects and skills
     render: function(){
@@ -74,9 +68,9 @@ var Skills = React.createClass({
             });
 
             return (
-                <div>
-                    <h5>Things I Like to Do:</h5>
-                    <ul>
+                <div className="col-md-12">
+                    <h5 className="heading">Things I Like to Do:</h5>
+                    <ul className="skills list-inline">
                     {skills}
                     </ul>
                 </div>
@@ -84,7 +78,6 @@ var Skills = React.createClass({
     }
 });
 
-//Project component
 var Projects = React.createClass({
     render: function(){
             var projects = this.props.projectList.map(function(project, index){
@@ -102,7 +95,6 @@ var Projects = React.createClass({
     }
 });
 
-//Renders the App component - which contains all of our HTMl
 ReactDOM.render(<App profileData={DATA} />, document.getElementById('content'));
 
 </script>

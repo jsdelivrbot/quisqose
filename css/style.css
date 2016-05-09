@@ -1,0 +1,26 @@
+.header{
+    background-color: #d3d3d3;
+    max-width: 100%;
+}
+
+.heading {
+    text-align: center;
+}
+
+.picture {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%
+}
+
+.skills {
+    list-style-type: none;
+}
+
+.icon {
+    font-size: 12rem;
+}
+
+.icon li {
+    text-align: center;
+}
