@@ -1,7 +1,8 @@
 var React = require('react');
+var Portfolio = require('Portfolio');
 
 var Skills = React.createClass({
-    //use the map method to create arrays of projects and skills
+    // use the map method to create arrays of projects and skills
     render: function(){
             var skills = this.props.skillList.map(function(skill, index){
                 return (<li key={index}>{skill}</li>);

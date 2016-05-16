@@ -1,6 +1,10 @@
 var React = require('react');
+// var Data = require('Data');
+
 
 var Projects = React.createClass({
+    // debugger;
+
     render: function(){
             var projects = this.props.projectList.map(function(project, index){
                 return (<li key={index}>{project}</li>);
@@ -10,7 +14,7 @@ var Projects = React.createClass({
                 <div>
                     <h5>Things Ive Done:</h5>
                     <ul>
-                    {projects}
+                        {projects}
                     </ul>
                 </div>
         );
