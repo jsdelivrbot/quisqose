@@ -11,7 +11,7 @@ var Skills = React.createClass({
             return (
                 <div className="col-md-12">
                     <h5 className="heading">Things I Like to Do:</h5>
-                    <ul className="skills list-inline">
+                    <ul className="skills inline-list">
                     {skills}
                     </ul>
                 </div>
