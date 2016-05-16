@@ -13,7 +13,7 @@ var Projects = React.createClass({
             return (
                 <div>
                     <h5>Things Ive Done:</h5>
-                    <ul className="projects inline-list">
+                    <ul className="menu simple projects inline-list">
                         {projects}
                     </ul>
                 </div>

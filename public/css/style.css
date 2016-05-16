@@ -23,3 +23,7 @@
 .icon li {
     text-align: center;
 }
+
+.projects {
+    clear: both;
+}
