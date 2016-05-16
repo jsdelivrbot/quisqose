@@ -9,9 +9,9 @@ var Skills = React.createClass({
             });
 
             return (
-                <div className="col-md-12">
+                <div className="skills col-md-12 text-center">
                     <h5 className="heading">Things I Like to Do:</h5>
-                    <ul className="skills menu simple inline-list">
+                    <ul className="skillList menu simple inline-list">
                     {skills}
                     </ul>
                 </div>

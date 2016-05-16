@@ -11,7 +11,8 @@ var Portfolio = React.createClass({
 
         return (
             <div className="header">
-                <h3 className="heading">Kevin Tokheim</h3>
+                <h3 className="name text-center">Kevin Tokheim</h3>
+                <img className=" picture text-center" src={"img/eeyore.jpeg"}/>
                 <Skills skillList={this.props.profileData.skillList}/>
                 <Projects projectList={this.props.profileData.projectList}/>
             </div>

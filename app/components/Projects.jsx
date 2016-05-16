@@ -11,9 +11,9 @@ var Projects = React.createClass({
             });
 
             return (
-                <div>
-                    <h5>Things Ive Done:</h5>
-                    <ul className="menu simple projects inline-list">
+                <div className="projects text-center">
+                    <h5 className="heading">Things Ive Done:</h5>
+                    <ul className="menu simple projectList inline-list">
                         {projects}
                     </ul>
                 </div>
