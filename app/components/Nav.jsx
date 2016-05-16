@@ -21,22 +21,16 @@ var Nav = React.createClass({
 
     onSearch: function(e){
         e.preventDefault();
-        alert('not yet wired up dummy');
+        alert('Houston, we have a problem...');
     },
     render: function(){
         return (
             <div className="top-bar">
                 <div className="top-bar-left">
                     <ul className="menu">
-                        <li className="menu-text">How's the Weather Today?</li>
-                        <li>
-                            <IndexLink to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Get Weather</IndexLink>
-                        </li>
+                        <li className="menu-text">Home</li>
                         <li>
                             <Link to="about" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>About</Link>
-                        </li>
-                        <li>
-                            <Link to="examples" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Examples</Link>
                         </li>
                     </ul>
                 </div>
@@ -44,10 +38,10 @@ var Nav = React.createClass({
                     <form onSubmit={this.onSearch}>
                         <ul className="menu">
                             <li>
-                                <input type="search" placeholder="Search for da weather"/>
+                                <input type="search" placeholder="Search"/>
                             </li>
                             <li>
-                                <input type="submit" className="button" value="Get da weather"/>
+                                <input type="submit" className="button" value="Submit"/>
                             </li>
                         </ul>
                     </form>
