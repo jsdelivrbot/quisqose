@@ -1,7 +1,7 @@
 //Main component for portfolio
 var React = require('react');
-var Nav = require('Nav');
-var About = require('About');
+// var Nav = require('Nav');
+// var About = require('About');
 var Portfolio = require('Portfolio');
 
 var Main = (props) => {
@@ -17,9 +17,9 @@ var Main = (props) => {
                       <a href="http://dev-come-along-test.pantheon.io/"><img src={"img/comealongthumb1.jpeg"}/>Come Along</a>
                   ]
     }
+
     return (
         <div>
-            <Nav/>
             <div className="row">
                 <Portfolio profileData={DATA}/>
             </div>

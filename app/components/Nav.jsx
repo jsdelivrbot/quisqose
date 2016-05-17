@@ -1,4 +1,5 @@
 var React = require('react');
+var About = require('About');
 var {Link, IndexLink} = require('react-router');
 
 //React-router allows us to create links with var {Link} - ES6 destructuring
