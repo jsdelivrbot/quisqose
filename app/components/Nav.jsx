@@ -5,6 +5,7 @@ var {Link, IndexLink} = require('react-router');
 //React-router allows us to create links with var {Link} - ES6 destructuring
 //IndexLink prevents the '/' path from inheriting the active style when it is not active
 //Rule of Thumb: when using IndexRoute, use IndexLink as well (in the main component)
+
 // var Nav = React.createClass({
 //     render: function () {
 //         return (
