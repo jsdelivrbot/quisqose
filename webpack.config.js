@@ -26,7 +26,11 @@ module.exports = {
         Nav: 'app/components/Nav.jsx',
         RouteHandler: 'app/components/RouteHandler.jsx',
         Portfolio: 'app/components/Portfolio.jsx',
-        Home: 'app/components/Home.jsx'
+        Home: 'app/components/Home.jsx',
+        Travelbug: 'app/components/Travelbug.jsx',
+        Circles: 'app/components/Circles.jsx',
+        Weather: 'app/components/Weather.jsx',
+        PathHop: 'app/components/PathHop.jsx'
     },
     extensions: ['', '.js', '.jsx']
   },
