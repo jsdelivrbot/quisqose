@@ -24,11 +24,13 @@ module.exports = {
     alias: {
         Main: 'app/components/Main.jsx',
         Nav: 'app/components/Nav.jsx',
+        RouteHandler: 'app/components/RouteHandler.jsx',
         Portfolio: 'app/components/Portfolio.jsx',
-        Projects: 'app/components/Projects.jsx',
-        Skills: 'app/components/Skills.jsx',
-        About: 'app/components/About.jsx',
-        Data: 'app/components/Data.jsx'
+        Home: 'app/components/Home.jsx',
+        Travelbug: 'app/components/Travelbug.jsx',
+        Circles: 'app/components/Circles.jsx',
+        Weather: 'app/components/Weather.jsx',
+        PathHop: 'app/components/PathHop.jsx'
     },
     extensions: ['', '.js', '.jsx']
   },

@@ -1,21 +1,18 @@
 var React = require('react');
-var Projects = require('Projects');
-var Skills = require('Skills');
-// var Data = require('Data');
-
-
+var Nav = require('Nav')
 
 var Portfolio = React.createClass({
 
     render: function(){
 
         return (
+          <div>
+            <Nav />
             <div className="header">
-                <h3 className="name text-center">Kevin Tokheim</h3>
-                <img className=" picture text-center" src={"img/eeyore.jpeg"}/>
-                <Skills skillList={this.props.profileData.skillList}/>
-                <Projects projectList={this.props.profileData.projectList}/>
+              <h3 className="name text-center">Portfolio</h3>
+              <img className=" picture text-center" src={"img/eeyore.jpeg"}/>
             </div>
+          </div>
         );
     }
 });
